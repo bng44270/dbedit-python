@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Available Tables</title>
+</head>
+<body>
+<table border="0">
+<tr><th>Table Name</th></tr>
+{% for thisTable in tables %}
+<tr><td>
+<a href="/{{thisTable}}/list">{{thisTable}}</a>
+</td></tr>
+{% endfor %}
+</table>
+</body>
+</html>

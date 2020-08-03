@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>View {{tablename}} ({{id}})</title>
+</head>
+<body>
+<table border="0">
+<tr><td>
+<table border="0">
+{% for field in config['schema'] %}
+<tr><td>{{thisField}}</td></tr>
+{% endfor %}
+</table>
+</td><td>
+<table border="0">
+{% for field in config['data'] %}
+<tr><td>{{thisField}}</td></tr>
+{% endfor %}
+</table>
+</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>List:  {{tablename}}</title>
+</head>
+<body>
+<a href="/{{tablename}}/new">New Record</a><br/>
+<table border="0">
+<tr>
+{% for thisField in config['schema'] %}
+<th>{{thisField}}</th>
+{% endfor %}
+</tr>
+{% for records in config['data'] %}
+<tr style="border:5px;">
+{% for field in records %}
+<td>{{field}}</td>
+{% endfor %}
+<td>
+<a href="/{{tablename}}/edit/{{records[0]}}">Edit</a><br/>
+<a href="/{{tablename}}/delete/{{records[0]}}">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
