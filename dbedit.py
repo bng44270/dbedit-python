@@ -1,9 +1,5 @@
-import sys
-from os import path as file_path
 from flask import Flask, send_file, make_response, redirect, request
 from ezmysql import TableDef
-from urllib import quote as url_encode, unquote as url_decode
-from dataeditor import DataEditor
 from configfile import ConfigFile
 
 CONFIG = ConfigFile('./itapps.cfg')
